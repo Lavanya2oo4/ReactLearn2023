@@ -52,7 +52,7 @@ export default function Navbar(props) {
       <nav className={`navbar navbar-expand-lg bg-${props.mode}`} data-bs-theme={props.mode}>
 
         <div>
-          <a className="navbar-brand" href="#" id="siteName"><img src="downloads/navIcon.png" id="navIcon" />{props.siteName}</a>
+          <a className="navbar-brand" href="#" id="siteName"><img src="navIcon.png" id="navIcon" />{props.siteName}</a>
           <a className="navbar-brand" href="#">{props.firstLink}</a>
         </div>
 

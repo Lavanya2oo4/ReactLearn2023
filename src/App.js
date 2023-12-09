@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './Components/Navbar.js';
 // imported useState
@@ -20,6 +19,8 @@ function App() {
             document.body.style.color = "white"
 
             showAlert("Dark Mode Enabled","success")
+
+            document.title="EasyEdit-DarkMode"
         }
         else {
             setMode("light")
@@ -27,6 +28,7 @@ function App() {
             document.body.style.color = "black"
 
             showAlert("Light Mode Enabled","success")
+            document.title="EasyEdit-LightMode"
 
         }
     }
