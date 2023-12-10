@@ -73,7 +73,7 @@ export default function Navbar(props) {
               <button type="button" className="btn btn-primary colorBtn" onClick={changeTheme6} style={{ backgroundColor: "#916BB5", color: "#916BB5" }} >.</button>
               <button type="button" className="btn btn-primary colorBtn" onClick={changeTheme7} style={{ backgroundColor: "#F9E79F", color: "#F9E79F" }} >.</button>
               <button type="button" className="btn btn-primary colorBtn" onClick={changeTheme8} style={{ backgroundColor: "#85C1E9", color: "#85C1E9" }} >.</button>
-              <button type="button" className="btn btn-primary" onClick={resetTheme}>Reset</button>
+              <button type="button" className="btn btn-primary reset" onClick={resetTheme}>Reset</button>
             </div>
           </div>
 

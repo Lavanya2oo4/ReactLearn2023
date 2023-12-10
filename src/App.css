@@ -59,23 +59,33 @@ body {
 }
 
 button {
-  margin: 1vh;
+  margin:1vw;
 }
 #siteName{
-  font-size: 3.5vh;
+  font-size: 3vw;
 }
 #txtForm {
   margin: auto;
   padding: 5vw;
-  width:60vw;
-}
+  width:70vw;
 
+}
+textarea{
+  width:60vw;
+  height:20vh;
+  padding: 5px;
+}
+body{
+  overflow-x: hidden;
+}
 #enhance{
   margin: 1vh 3vh;
 }
 .navbar{
   display: flex;
   justify-content:space-between;
+  width:100vw;
+
 }
 
 
@@ -113,4 +123,22 @@ p{
 
 .colorBtn{
   border:1px solid white;
+}
+
+@media screen and (max-width:600px) {
+  body{
+    /* background-color: blue; */
+
+  }
+  h5{
+    font-size: 3vw;
+    margin-right: 1vw;
+    margin-left: -4vh;
+  }
+
+  nav .colorBtn{
+    width:0.5vh !important;
+    height:5vh;
+  }
+  
 }

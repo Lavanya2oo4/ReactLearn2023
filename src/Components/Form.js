@@ -39,6 +39,8 @@ export default function Form(props) {
         
     }
 
+
+   
    
 
     const handleChange = (e) => {
@@ -52,7 +54,7 @@ export default function Form(props) {
         <div id="txtForm">
             <form >
                 <h1 style={{color:props.mode==="light"?"blue":"white"}}> Enter the Text to Capitalize:</h1>
-                <textarea cols="100" rows="10" value={text} onChange={handleChange}></textarea>
+                <textarea value={text} onChange={handleChange}></textarea>
                 <br />
                 <button type="button" className={`btn btn-${props.mode==="light"?"dark":"light"}`} onClick={upperCase} >Change To UpperCase</button>
                 <button type="button" className={`btn btn-${props.mode==="light"?"dark":"light"}`} onClick={lowerCase} >Change To LowerCase</button>
