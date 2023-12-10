@@ -53,7 +53,6 @@ export default function Navbar(props) {
 
         <div>
           <a className="navbar-brand" href="#" id="siteName"><img src="navIcon.png" id="navIcon" />{props.siteName}</a>
-          <a className="navbar-brand" href="#">{props.firstLink}</a>
         </div>
 
 

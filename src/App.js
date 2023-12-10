@@ -57,7 +57,7 @@ function App() {
     return (
         <>
 
-            <Navbar siteName="EasyEdit" firstLink="Help" mode={mode} switchFunc={switchFunc} showAlert={showAlert}/>
+            <Navbar siteName="EasyEdit" mode={mode} switchFunc={switchFunc} showAlert={showAlert}/>
 
             <Alert alert={alert}/>
 
