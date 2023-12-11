@@ -53,14 +53,14 @@ export default function Form(props) {
     return (
         <div id="txtForm">
             <form >
-                <h1 style={{color:props.mode==="light"?"blue":"white"}}> Enter the Text to Capitalize:</h1>
-                <textarea value={text} onChange={handleChange}></textarea>
+                <h1 style={{color:props.mode==="light"?"blue":"white"}}> Enter the Text to Make Changes:</h1>
+                <textarea value={text} onChange={handleChange} placeholder='Enter Text Here'></textarea>
                 <br />
-                <button type="button" className={`btn btn-${props.mode==="light"?"dark":"light"}`} onClick={upperCase} >Change To UpperCase</button>
-                <button type="button" className={`btn btn-${props.mode==="light"?"dark":"light"}`} onClick={lowerCase} >Change To LowerCase</button>
-                <button type="button" className={`btn btn-${props.mode==="light"?"dark":"light"}`} onClick={removeSpace} >Remove Space</button>
-                <button type="button" className={`btn btn-${props.mode==="light"?"dark":"light"}`} onClick={copy} >Copy</button>
-                <button type="button" className="btn btn-danger" onClick={clear} >Clear</button>
+                <button disabled={text.length==0} type="button" className={`btn btn-${props.mode==="light"?"dark":"light"}`} onClick={upperCase} >Change To UpperCase</button>
+                <button  disabled={text.length==0} type="button" className={`btn btn-${props.mode==="light"?"dark":"light"}`} onClick={lowerCase} >Change To LowerCase</button>
+                <button disabled={text.length==0} type="button" className={`btn btn-${props.mode==="light"?"dark":"light"}`} onClick={removeSpace} >Remove Space</button>
+                <button disabled={text.length==0} type="button" className={`btn btn-${props.mode==="light"?"dark":"light"}`} onClick={copy} >Copy</button>
+                <button disabled={text.length==0} type="button" className="btn btn-danger" onClick={clear} >Clear</button>
 
             </form>
 
@@ -73,7 +73,9 @@ export default function Form(props) {
                 <p>{text}</p>
 
                 <h6 style={{color:props.mode==="light"?"black":"white"}}>Word Count:</h6>
-                <p>{text.length==0? text.split(" ").length-1:text.split(" ").length}</p>
+                <p>{text.split(/\s+/).filter((e)=>{
+                    return e.length>0
+                }).length}</p>
 
                 <h6 style={{color:props.mode==="light"?"black":"white"}}>Character Count:</h6>
                 <p>{text.length}</p>

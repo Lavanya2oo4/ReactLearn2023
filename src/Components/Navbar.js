@@ -1,4 +1,5 @@
 import React from 'react'
+import navIcon from './images/navIcon.png'
 
 import PropTypes from 'prop-types'    //importing prop types
 
@@ -50,9 +51,10 @@ export default function Navbar(props) {
 
 
       <nav className={`navbar navbar-expand-lg bg-${props.mode}`} data-bs-theme={props.mode}>
+      
 
         <div>
-          <a className="navbar-brand" href="#" id="siteName"><img src="navIcon.png" id="navIcon" />{props.siteName}</a>
+          <a className="navbar-brand" href="#" id="siteName"><img src={navIcon} id="navIcon" />{props.siteName}</a>
         </div>
 
 
